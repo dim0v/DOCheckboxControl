@@ -1,55 +1,84 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xIP-78-Z3j">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
+        <!--Checkbox demo-->
+        <scene sceneID="Kx2-PH-3av">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="DOCheckboxControl_Example" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IZp-Qc-YMC" customClass="Checkbox" customModule="DOCheckboxControl">
-                                <rect key="frame" x="150" y="150" width="300" height="300"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="IZp-Qc-YMC" secondAttribute="height" multiplier="1:1" id="EfQ-iK-siG"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
-                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
-                                        <real key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="selected" value="NO"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="highlighted" value="NO"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="animateDuration">
-                                        <real key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="0.90000000000000002" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="centerY" secondItem="IZp-Qc-YMC" secondAttribute="centerY" id="4s6-8X-AbG"/>
-                            <constraint firstAttribute="height" relation="lessThanOrEqual" secondItem="IZp-Qc-YMC" secondAttribute="height" priority="750" id="5AD-O1-Wge"/>
-                            <constraint firstAttribute="width" secondItem="IZp-Qc-YMC" secondAttribute="width" multiplier="2:1" id="RBU-Dt-fPE"/>
-                            <constraint firstAttribute="centerX" secondItem="IZp-Qc-YMC" secondAttribute="centerX" id="Zp0-VP-GGo"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <tableViewController title="Checkbox demo" id="jrc-BC-iFB" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="116" sectionHeaderHeight="22" sectionFooterHeight="22" id="Ubx-5c-dSR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <sections>
+                            <tableViewSection id="fdj-em-cNY">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="116" id="PF6-3P-J9u" customClass="CheckboxTableViewCell" customModule="DOCheckboxControl_Example" customModuleProvider="target">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PF6-3P-J9u" id="E81-Y0-T10">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m2U-Kx-zdj" customClass="CheckboxControl" customModule="DOCheckboxControl">
+                                                    <rect key="frame" x="8" y="8" width="99" height="99"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="m2U-Kx-zdj" secondAttribute="height" multiplier="1:1" id="tEZ-ZM-ycu"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Simple checkbox" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7U-9F-cKU">
+                                                    <rect key="frame" x="115" y="47" width="197" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="m2U-Kx-zdj" secondAttribute="bottom" id="AKz-ff-7pO"/>
+                                                <constraint firstAttribute="centerY" secondItem="h7U-9F-cKU" secondAttribute="centerY" id="DdW-Om-amY"/>
+                                                <constraint firstItem="m2U-Kx-zdj" firstAttribute="leading" secondItem="E81-Y0-T10" secondAttribute="leadingMargin" id="EXP-AD-E4H"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="h7U-9F-cKU" secondAttribute="trailing" id="SKp-cQ-iy9"/>
+                                                <constraint firstItem="m2U-Kx-zdj" firstAttribute="top" secondItem="E81-Y0-T10" secondAttribute="topMargin" id="p8W-aD-qaD"/>
+                                                <constraint firstItem="h7U-9F-cKU" firstAttribute="leading" secondItem="m2U-Kx-zdj" secondAttribute="trailing" constant="8" id="zH7-aK-FhK"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="checkbox" destination="m2U-Kx-zdj" id="9SF-oB-YTA"/>
+                                            <outlet property="titleLabel" destination="h7U-9F-cKU" id="nSd-JN-TGc"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="jrc-BC-iFB" id="10p-cb-oMV"/>
+                            <outlet property="delegate" destination="jrc-BC-iFB" id="LZw-fP-RNP"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Checkbox demo" id="hDg-OP-YJv"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nch-qI-TGV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="231" y="382"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PjT-dw-vpS">
+            <objects>
+                <navigationController id="xIP-78-Z3j" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wfv-KM-fMF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="jrc-BC-iFB" kind="relationship" relationship="rootViewController" id="w68-6K-tbt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MiD-FO-bRv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-291" y="382"/>
         </scene>
     </scenes>
 </document>

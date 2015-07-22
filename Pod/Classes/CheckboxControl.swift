@@ -9,14 +9,22 @@
 import UIKit
 
 @IBDesignable
-class Checkbox: UIControl {
+public class CheckboxControl: UIControl {
     
-    @IBInspectable var lineWidth: CGFloat = 2.0
-    @IBInspectable var lineColor: UIColor = UIColor.blackColor()
+    @IBInspectable public var lineWidth: CGFloat = 2.0
+    @IBInspectable public var lineColor: UIColor! {
+        get {
+            if _lineColor == nil {
+                return tintColor
+            }
+            return _lineColor
+        }
+        set {
+            _lineColor = newValue
+        }
+    }
     
-    private var _lineHighlightedColor: UIColor?
-    
-    @IBInspectable var lineHighlightedColor: UIColor! {
+    @IBInspectable public var lineHighlightedColor: UIColor! {
         get {
             if _lineHighlightedColor == nil {
                 return lineColor.colorWithAlphaComponent(0.3)
@@ -27,9 +35,9 @@ class Checkbox: UIControl {
             _lineHighlightedColor = newValue
         }
     }
-    @IBInspectable var animateDuration: CGFloat = 0.4
+    @IBInspectable public var animateDuration: CGFloat = 0.4
     
-    @IBInspectable override var selected: Bool {
+    @IBInspectable override public var selected: Bool {
         get {
             return super.selected
         }
@@ -38,7 +46,7 @@ class Checkbox: UIControl {
         }
     }
     
-    @IBInspectable override var highlighted: Bool {
+    @IBInspectable override public var highlighted: Bool {
         get {
             return super.highlighted
         }
@@ -47,7 +55,43 @@ class Checkbox: UIControl {
         }
     }
     
-    func setSelected(selected:Bool, animated:Bool) {
+    override public func layoutSubviews() {
+        super.layoutSubviews()
+        
+        lineLayer = nil
+        self.setSelected(selected, animated: false)
+        self.setHighlighted(highlighted, animated: false)
+    }
+    
+    override public func endTrackingWithTouch(touch: UITouch?, withEvent event: UIEvent?) {
+        super.endTrackingWithTouch(touch!, withEvent: event!)
+        
+        if bounds.contains(touch!.locationInView(self)) {
+            self.setSelected(!selected, animated: true)
+            sendActionsForControlEvents(UIControlEvents.ValueChanged)
+        }
+    }
+    
+    //MARK: backing storage for computed properties
+    
+    private var _lineHighlightedColor: UIColor?
+    
+    private var _lineColor: UIColor?
+    
+    private var _lineLayer: CAShapeLayer? {
+        didSet {
+            oldValue?.removeFromSuperlayer()
+            lineHighlightedLayer = nil
+        }
+    }
+    
+    private var _lineHighlightedLayer: CAShapeLayer? {
+        didSet {
+            oldValue?.removeFromSuperlayer()
+        }
+    }
+    
+    public func setSelected(selected:Bool, animated:Bool) {
         super.selected = selected
         
         CATransaction.begin()
@@ -70,7 +114,7 @@ class Checkbox: UIControl {
         CATransaction.commit()
     }
     
-    func setHighlighted(highlighted:Bool, animated:Bool) {
+    public func setHighlighted(highlighted:Bool, animated:Bool) {
         super.highlighted = highlighted
         
         CATransaction.begin()
@@ -88,7 +132,7 @@ class Checkbox: UIControl {
     }
     
     private func checkmarkLayerWithColor(color:UIColor) -> CAShapeLayer {
-        var ret = CAShapeLayer()
+        let ret = CAShapeLayer()
         
         ret.strokeColor = color.CGColor
         ret.fillColor   = UIColor.clearColor().CGColor
@@ -100,19 +144,12 @@ class Checkbox: UIControl {
         return ret
     }
     
-    private var _lineLayer: CAShapeLayer? {
-        didSet {
-            oldValue?.removeFromSuperlayer()
-            lineHighlightedLayer = nil
-        }
-    }
-    
     private var lineLayer: CAShapeLayer! {
         get {
             if _lineLayer == nil {
                 _lineLayer = checkmarkLayerWithColor(lineColor)
                 
-                self.layer.addSublayer(_lineLayer)
+                self.layer.addSublayer(_lineLayer!)
             }
             return _lineLayer
         }
@@ -121,18 +158,12 @@ class Checkbox: UIControl {
         }
     }
     
-    private var _lineHighlightedLayer: CAShapeLayer? {
-        didSet {
-            oldValue?.removeFromSuperlayer()
-        }
-    }
-    
     private var lineHighlightedLayer: CAShapeLayer! {
         get {
             if _lineHighlightedLayer == nil {
                 _lineHighlightedLayer = checkmarkLayerWithColor(lineHighlightedColor)
                 
-                self.layer.addSublayer(_lineHighlightedLayer)
+                self.layer.addSublayer(_lineHighlightedLayer!)
             }
             
             return _lineHighlightedLayer
@@ -184,22 +215,5 @@ class Checkbox: UIControl {
         let angle:CGFloat = CGFloat(7 * M_PI / 4);
         return CGPoint( x: boundsCenter.x + outerRadius * cos(angle),
                         y: boundsCenter.y + outerRadius * sin(angle))
-    }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        
-        lineLayer = nil
-        self.setSelected(selected, animated: false)
-        self.setHighlighted(highlighted, animated: false)
-    }
-    
-    override func endTrackingWithTouch(touch: UITouch, withEvent event: UIEvent) {
-        super.endTrackingWithTouch(touch, withEvent: event)
-        
-        if bounds.contains(touch.locationInView(self)) {
-            self.setSelected(!selected, animated: true)
-            sendActionsForControlEvents(UIControlEvents.ValueChanged)
-        }
     }
 }
