@@ -1,0 +1,6 @@
+framework module DOCheckboxControl {
+  umbrella header "DOCheckboxControl-umbrella.h"
+
+  export *
+  module * { export * }
+}
