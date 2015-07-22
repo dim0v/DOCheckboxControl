@@ -58,8 +58,10 @@ class Checkbox: UIControl {
             lineLayer.strokeEnd = 1
         } else {
             CATransaction.setCompletionBlock { [unowned self] () -> Void in
-                self.lineLayer.strokeStart = 0
-                self.lineLayer.strokeEnd = 0
+                if !self.selected {
+                    self.lineLayer.strokeStart = 0
+                    self.lineLayer.strokeEnd = 0
+                }
             }
             lineLayer.strokeStart = 1
             lineLayer.strokeEnd = 1
