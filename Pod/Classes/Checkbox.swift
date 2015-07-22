@@ -85,6 +85,19 @@ class Checkbox: UIControl {
         CATransaction.commit()
     }
     
+    private func checkmarkLayerWithColor(color:UIColor) -> CAShapeLayer {
+        var ret = CAShapeLayer()
+        
+        ret.strokeColor = color.CGColor
+        ret.fillColor   = UIColor.clearColor().CGColor
+        ret.lineCap     = kCALineCapRound
+        ret.lineJoin    = kCALineJoinRound
+        ret.lineWidth   = self.lineWidth
+        ret.path        = self.checkmarkPath.CGPath
+        
+        return ret
+    }
+    
     private var _lineLayer: CAShapeLayer? {
         didSet {
             oldValue?.removeFromSuperlayer()
@@ -95,14 +108,7 @@ class Checkbox: UIControl {
     private var lineLayer: CAShapeLayer! {
         get {
             if _lineLayer == nil {
-                _lineLayer = CAShapeLayer()
-                
-                _lineLayer!.strokeColor = lineColor.CGColor
-                _lineLayer!.fillColor   = UIColor.clearColor().CGColor
-                _lineLayer!.lineCap     = kCALineCapRound
-                _lineLayer!.lineJoin    = kCALineJoinRound
-                _lineLayer!.lineWidth   = lineWidth
-                _lineLayer!.path        = checkmarkPath.CGPath
+                _lineLayer = checkmarkLayerWithColor(lineColor)
                 
                 self.layer.addSublayer(_lineLayer)
             }
@@ -122,14 +128,7 @@ class Checkbox: UIControl {
     private var lineHighlightedLayer: CAShapeLayer! {
         get {
             if _lineHighlightedLayer == nil {
-                _lineHighlightedLayer = CAShapeLayer()
-                
-                _lineHighlightedLayer!.strokeColor = lineHighlightedColor.CGColor
-                _lineHighlightedLayer!.fillColor   = UIColor.clearColor().CGColor
-                _lineHighlightedLayer!.lineCap     = kCALineCapRound
-                _lineHighlightedLayer!.lineJoin    = kCALineJoinRound
-                _lineHighlightedLayer!.lineWidth   = lineWidth
-                _lineHighlightedLayer!.path        = checkmarkPath.CGPath
+                _lineHighlightedLayer = checkmarkLayerWithColor(lineHighlightedColor)
                 
                 self.layer.addSublayer(_lineHighlightedLayer)
             }
