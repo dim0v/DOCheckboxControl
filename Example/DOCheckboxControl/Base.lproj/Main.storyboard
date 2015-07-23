@@ -13,6 +13,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="116" sectionHeaderHeight="22" sectionFooterHeight="22" id="Ubx-5c-dSR">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
                             <tableViewSection id="fdj-em-cNY">
                                 <cells>
@@ -197,9 +198,42 @@
                             <outlet property="delegate" destination="jrc-BC-iFB" id="LZw-fP-RNP"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Checkbox demo" id="hDg-OP-YJv"/>
+                    <navigationItem key="navigationItem" title="Demo" id="hDg-OP-YJv">
+                        <barButtonItem key="leftBarButtonItem" width="75" style="plain" id="fwj-eW-vwX">
+                            <inset key="imageInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ah3-g2-HYH">
+                                <rect key="frame" x="16" y="7" width="75" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <string key="title">Switch
+instantly</string>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="switchNotAnimated" destination="jrc-BC-iFB" eventType="touchUpInside" id="E48-ny-a5n"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" width="75" style="plain" id="ZEg-tz-YNP">
+                            <inset key="imageInsets" minX="8" minY="8" maxX="8" maxY="8"/>
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ynU-WP-yLA">
+                                <rect key="frame" x="534" y="7" width="75" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <string key="title">Switch
+animated</string>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="switchAnimated" destination="jrc-BC-iFB" eventType="touchUpInside" id="qDp-Ja-p1w"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="programmaticalySwitchableCheckbox" destination="m2U-Kx-zdj" id="YGH-65-9Lc"/>
+                        <outlet property="switchAnimatedBtn" destination="ynU-WP-yLA" id="N8b-en-6lr"/>
+                        <outlet property="switchInstantlyBtn" destination="Ah3-g2-HYH" id="PMg-0i-abP"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nch-qI-TGV" userLabel="First Responder" sceneMemberID="firstResponder"/>

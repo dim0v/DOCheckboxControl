@@ -12,22 +12,24 @@ import DOCheckboxControl
 class MainTableViewController: UITableViewController {
 
     @IBOutlet weak var programmaticalySwitchableCheckbox: CheckboxControl!
+    @IBOutlet weak var switchInstantlyBtn: UIButton!
+    @IBOutlet weak var switchAnimatedBtn: UIButton!
     
     override func viewDidLoad() {
-        let switchAnimatedButton = UIBarButtonItem(title: "Switch animated", style: UIBarButtonItemStyle.Plain, target: self, action: "switchAnimated")
-        let switchNotAnimatedButton = UIBarButtonItem(title: "Switch instantly", style: UIBarButtonItemStyle.Plain, target: self, action: "switchNotAnimated")
-        
-        self.navigationItem.leftBarButtonItem = switchAnimatedButton
-        self.navigationItem.rightBarButtonItem = switchNotAnimatedButton
+        super.viewDidLoad()
         
         programmaticalySwitchableCheckbox.enabled = false
+        switchInstantlyBtn.titleLabel?.numberOfLines = 0;
+        switchAnimatedBtn.titleLabel?.numberOfLines = 0;
+        switchInstantlyBtn.titleLabel?.textAlignment = NSTextAlignment.Center;
+        switchAnimatedBtn.titleLabel?.textAlignment = NSTextAlignment.Center;
     }
     
-    dynamic func switchAnimated() {
+    @IBAction func switchAnimated() {
         programmaticalySwitchableCheckbox.setSelected(!programmaticalySwitchableCheckbox.selected, animated: true)
     }
     
-    dynamic func switchNotAnimated() {
+    @IBAction func switchNotAnimated() {
         programmaticalySwitchableCheckbox.setSelected(!programmaticalySwitchableCheckbox.selected, animated: false)
     }
 }
