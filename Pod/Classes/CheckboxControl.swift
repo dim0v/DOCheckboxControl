@@ -8,10 +8,14 @@
 
 import UIKit
 
+/// Checkbox control. Sends UIControlEvents.ValueChanged event when it's state changes
 @IBDesignable
 public class CheckboxControl: UIControl {
     
+    /// Width of checkmark line. 2 points by default. IBInspectable
     @IBInspectable public var lineWidth: CGFloat = 2.0
+    
+    /// Color of checkmark. By default is view's tint color. IBInspectable
     @IBInspectable public var lineColor: UIColor! {
         get {
             if _lineColor == nil {
@@ -24,6 +28,7 @@ public class CheckboxControl: UIControl {
         }
     }
     
+    /// Color of checkmark in highlighted state. By default is `lineColor` with alpha set to 0.3. IBInspectable
     @IBInspectable public var lineHighlightedColor: UIColor! {
         get {
             if _lineHighlightedColor == nil {
@@ -35,8 +40,15 @@ public class CheckboxControl: UIControl {
             _lineHighlightedColor = newValue
         }
     }
+    
+    /// Duration of animation between selected/not selected states and highlighted/not highlighted states. IBInspectable
     @IBInspectable public var animateDuration: CGFloat = 0.4
     
+    
+    /**
+    *  A Boolean value that determines the receiver’s selected state.
+    *  Specify true if the checkbox is selected; otherwise false. The default is false. This state toggles automatically when touch up happens. IBInspectable
+    */
     @IBInspectable override public var selected: Bool {
         get {
             return super.selected
@@ -46,6 +58,10 @@ public class CheckboxControl: UIControl {
         }
     }
     
+    /**
+    *  A Boolean value that determines whether the receiver is highlighted.
+    *  Specify true if the checkbox is highlighted; otherwise false. By default, a checkbox is not highlighted. This state is set automatically when a touch enters and exits during tracking and when there is a touch up. IBInspectable
+    */
     @IBInspectable override public var highlighted: Bool {
         get {
             return super.highlighted
@@ -55,42 +71,13 @@ public class CheckboxControl: UIControl {
         }
     }
     
-    override public func layoutSubviews() {
-        super.layoutSubviews()
-        
-        lineLayer = nil
-        self.setSelected(selected, animated: false)
-        self.setHighlighted(highlighted, animated: false)
-    }
+    /**
+    Sets the state of the checkbox selection. Can be animated.
+    This is called automatically when touch up happens within a view's bounds.
     
-    override public func endTrackingWithTouch(touch: UITouch?, withEvent event: UIEvent?) {
-        super.endTrackingWithTouch(touch!, withEvent: event!)
-        
-        if bounds.contains(touch!.locationInView(self)) {
-            self.setSelected(!selected, animated: true)
-            sendActionsForControlEvents(UIControlEvents.ValueChanged)
-        }
-    }
-    
-    //MARK: backing storage for computed properties
-    
-    private var _lineHighlightedColor: UIColor?
-    
-    private var _lineColor: UIColor?
-    
-    private var _lineLayer: CAShapeLayer? {
-        didSet {
-            oldValue?.removeFromSuperlayer()
-            lineHighlightedLayer = nil
-        }
-    }
-    
-    private var _lineHighlightedLayer: CAShapeLayer? {
-        didSet {
-            oldValue?.removeFromSuperlayer()
-        }
-    }
-    
+    :param: selected New state of checkbox (true/false)
+    :param: animated Should animate (true/false)
+    */
     public func setSelected(selected:Bool, animated:Bool) {
         super.selected = selected
         
@@ -114,6 +101,12 @@ public class CheckboxControl: UIControl {
         CATransaction.commit()
     }
     
+    /**
+    Sets the state of the checkbox highlight. Can be animated.
+    
+    :param: highlighted New state of highlight (true/false)
+    :param: animated    Should animate(true/false)
+    */
     public func setHighlighted(highlighted:Bool, animated:Bool) {
         super.highlighted = highlighted
         
@@ -130,6 +123,44 @@ public class CheckboxControl: UIControl {
         
         CATransaction.commit()
     }
+    
+    override public func layoutSubviews() {
+        super.layoutSubviews()
+        
+        lineLayer = nil
+        self.setSelected(selected, animated: false)
+        self.setHighlighted(highlighted, animated: false)
+    }
+    
+    override public func endTrackingWithTouch(touch: UITouch?, withEvent event: UIEvent?) {
+        super.endTrackingWithTouch(touch!, withEvent: event!)
+        
+        if bounds.contains(touch!.locationInView(self)) {
+            self.setSelected(!selected, animated: true)
+            sendActionsForControlEvents(UIControlEvents.ValueChanged)
+        }
+    }
+    
+    //MARK: Backing storage for computed properties
+    
+    private var _lineHighlightedColor: UIColor?
+    
+    private var _lineColor: UIColor?
+    
+    private var _lineLayer: CAShapeLayer? {
+        didSet {
+            oldValue?.removeFromSuperlayer()
+            lineHighlightedLayer = nil
+        }
+    }
+    
+    private var _lineHighlightedLayer: CAShapeLayer? {
+        didSet {
+            oldValue?.removeFromSuperlayer()
+        }
+    }
+    
+    //MARK: Helper functions and properties
     
     private func checkmarkLayerWithColor(color:UIColor) -> CAShapeLayer {
         let ret = CAShapeLayer()

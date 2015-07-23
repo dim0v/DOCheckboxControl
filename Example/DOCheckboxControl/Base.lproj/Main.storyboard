@@ -199,7 +199,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Demo" id="hDg-OP-YJv">
-                        <barButtonItem key="leftBarButtonItem" width="75" style="plain" id="fwj-eW-vwX">
+                        <barButtonItem key="leftBarButtonItem" width="75" style="done" id="fwj-eW-vwX">
                             <inset key="imageInsets" minX="8" minY="8" maxX="8" maxY="8"/>
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ah3-g2-HYH">
                                 <rect key="frame" x="16" y="7" width="75" height="30"/>
@@ -214,7 +214,7 @@ instantly</string>
                                 </connections>
                             </button>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" width="75" style="plain" id="ZEg-tz-YNP">
+                        <barButtonItem key="rightBarButtonItem" width="75" style="done" id="ZEg-tz-YNP">
                             <inset key="imageInsets" minX="8" minY="8" maxX="8" maxY="8"/>
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ynU-WP-yLA">
                                 <rect key="frame" x="534" y="7" width="75" height="30"/>
