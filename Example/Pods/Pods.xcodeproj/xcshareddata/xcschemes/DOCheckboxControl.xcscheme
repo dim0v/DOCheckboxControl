@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "16F51516363BF7933CAD5449"
+               BlueprintIdentifier = "808CD2DA33627804452965ED"
                BuildableName = "DOCheckboxControl.framework"
                BlueprintName = "DOCheckboxControl"
                ReferencedContainer = "container:Pods.xcodeproj">

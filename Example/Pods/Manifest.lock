@@ -1,5 +1,5 @@
 PODS:
-  - DOCheckboxControl (0.1.0)
+  - DOCheckboxControl (1.0.0)
   - FBSnapshotTestCase (1.8.1)
   - Nimble (0.4.2)
   - Nimble-Snapshots (0.4.0):
@@ -20,7 +20,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  DOCheckboxControl: 6fc53bed30a01244dc2e9580472081225a726c67
+  DOCheckboxControl: d166dda17f1a4ffe5493186719d39626372fd4a4
   FBSnapshotTestCase: 3dc3899168747a0319c5278f5b3445c13a6532dd
   Nimble: 49b7a7da8919f42823d37c6d68cc6d15a7009f32
   Nimble-Snapshots: 216ae8c0ea3f4105be1606749fe15d8b2138af40
