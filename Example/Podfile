@@ -4,12 +4,3 @@ use_frameworks!
 target 'DOCheckboxControl_Example', :exclusive => true do
   pod "DOCheckboxControl", :path => "../"
 end
-
-target 'DOCheckboxControl_Tests', :exclusive => true do
-  pod "DOCheckboxControl", :path => "../"
-
-  pod 'Quick', '~> 0.3.1'
-  pod 'Nimble'
-  pod 'FBSnapshotTestCase'
-  pod 'Nimble-Snapshots'
-end
