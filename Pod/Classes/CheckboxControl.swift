@@ -105,7 +105,7 @@ public class CheckboxControl: UIControl {
     Sets the state of the checkbox highlight. Can be animated.
     
     :param: highlighted New state of highlight (true/false)
-    :param: animated    Should animate(true/false)
+    :param: animated    Should animate (true/false)
     */
     public func setHighlighted(highlighted:Bool, animated:Bool) {
         super.highlighted = highlighted
@@ -124,6 +124,9 @@ public class CheckboxControl: UIControl {
         CATransaction.commit()
     }
     
+    /**
+    Lays out subviews.
+    */
     override public func layoutSubviews() {
         super.layoutSubviews()
         
@@ -132,6 +135,12 @@ public class CheckboxControl: UIControl {
         self.setHighlighted(highlighted, animated: false)
     }
     
+    /**
+    Sent to the control when the last touch for the given event completely ends, telling it to stop tracking.
+    
+    :param: touch A UITouch object that represents a touch on the receiving control during tracking.
+    :param: event An event object encapsulating the information specific to the user event.
+    */
     override public func endTrackingWithTouch(touch: UITouch?, withEvent event: UIEvent?) {
         super.endTrackingWithTouch(touch!, withEvent: event!)
         
