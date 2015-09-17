@@ -7,29 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		22450029B612396EF2EB74012ACDBFD5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4083C4475B2A83C22BC0344F1B8391E8 /* Foundation.framework */; };
-		5C00C4231D8B19086171B15AC9DE9CE2 /* CheckboxControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8FCCE71EF5A269C183E4E80A452522 /* CheckboxControl.swift */; };
-		6AA5899509CAAFC03B814DA155ACA1B4 /* DOCheckboxControl-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 58C9063D62247BAD857C8D1CA8F150CD /* DOCheckboxControl-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6EAA15FD6A6DAD87B72038DC8172F4A0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4083C4475B2A83C22BC0344F1B8391E8 /* Foundation.framework */; };
-		AFB60E1CD21E63E28D8A4016FCCCF955 /* DOCheckboxControl-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D583A1C09B298EAD7FF34321DDDF3884 /* DOCheckboxControl-dummy.m */; };
+		22450029B612396EF2EB74012ACDBFD5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4F495A66B625A723EE7C6D1B1910390 /* Foundation.framework */; };
+		4E0C78A9D896C4A6B942347167D860AA /* DOCheckboxControl-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D66253D535C7B94B7D4F10FCB71A6DEC /* DOCheckboxControl-dummy.m */; };
+		B0EE503072FA67D217708C692E186D31 /* DOCheckboxControl-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 527087ED4F7CA71AAF8A1A51AE8CB68A /* DOCheckboxControl-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3B8F4035E94405C10274A7705E2338A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4F495A66B625A723EE7C6D1B1910390 /* Foundation.framework */; };
 		B44FF1F8ACB699A68891E70E2001A066 /* Pods-DOCheckboxControl_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D48AEE8A3C077BF991F5D779BADE177 /* Pods-DOCheckboxControl_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B52CE4111EC780E3F98567CA43B47BAB /* Pods-DOCheckboxControl_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 622408B9505C4E80F8844C1AC316DD10 /* Pods-DOCheckboxControl_Example-dummy.m */; };
-		B5FCF3374B875E9C1485E3F15EAAE5C5 /* DOCheckboxControl.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DBB582B9375F11C04D2E371D638308B2 /* DOCheckboxControl.bundle */; };
+		D85F50B60DEFC7E43FDD60FA0D5F307E /* DOCheckboxControl.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 07034ED38FB6044C57175F20DADC5664 /* DOCheckboxControl.bundle */; };
+		FF28E46D635C42AFDD9DA1AC27E52B73 /* CheckboxControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDBE00579D18DC942ECF8725D8588AD /* CheckboxControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		52DA023E71B3A4E89EB469979FEEF386 /* PBXContainerItemProxy */ = {
+		05AD8E49491B9FD0CEFB3AF67D5B6911 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 86B9F8E81AF596D7F31E407881F92F27;
+			remoteGlobalIDString = D327DF9BAB1CC500CDC17DF147984700;
 			remoteInfo = DOCheckboxControl;
 		};
-		F0F4F3BAC8036B716CDC8E216BD927FE /* PBXContainerItemProxy */ = {
+		83EE3572AF3969900DEC666F037204DF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 66729630BE1AA90F4F26AA70885A59DF;
+			remoteGlobalIDString = 8ED77972671EBFF0673550F179F164D6;
 			remoteInfo = "DOCheckboxControl-DOCheckboxControl";
 		};
 /* End PBXContainerItemProxy section */
@@ -37,26 +37,26 @@
 /* Begin PBXFileReference section */
 		00D75325FFD54776E8F2532D3480C1E1 /* Pods-DOCheckboxControl_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-DOCheckboxControl_Example.modulemap"; sourceTree = "<group>"; };
 		0330F76C18B03C1DB935AB1D1BCEBDC9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07034ED38FB6044C57175F20DADC5664 /* DOCheckboxControl.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DOCheckboxControl.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F57C68890117456DBF3264CCF5294FD /* Pods-DOCheckboxControl_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DOCheckboxControl_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		1FFCAE886EDC4CEC2B92AF38E266441F /* DOCheckboxControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DOCheckboxControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CDBE00579D18DC942ECF8725D8588AD /* CheckboxControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CheckboxControl.swift; sourceTree = "<group>"; };
 		3CE17A8487C80E6B53E182A8121A0703 /* Pods_DOCheckboxControl_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DOCheckboxControl_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4083C4475B2A83C22BC0344F1B8391E8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		4AA3C702D52A834DCDB3D67C7D0EA754 /* Pods-DOCheckboxControl_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DOCheckboxControl_Example-frameworks.sh"; sourceTree = "<group>"; };
-		58C9063D62247BAD857C8D1CA8F150CD /* DOCheckboxControl-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DOCheckboxControl-umbrella.h"; sourceTree = "<group>"; };
+		527087ED4F7CA71AAF8A1A51AE8CB68A /* DOCheckboxControl-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DOCheckboxControl-umbrella.h"; sourceTree = "<group>"; };
 		622408B9505C4E80F8844C1AC316DD10 /* Pods-DOCheckboxControl_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DOCheckboxControl_Example-dummy.m"; sourceTree = "<group>"; };
 		6D48AEE8A3C077BF991F5D779BADE177 /* Pods-DOCheckboxControl_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DOCheckboxControl_Example-umbrella.h"; sourceTree = "<group>"; };
 		71F5C1289AA9D6123F77157F7DA1728D /* DOCheckboxControl.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DOCheckboxControl.xcconfig; sourceTree = "<group>"; };
+		820B6231F31AA956ADCB8A430BF5C0F2 /* DOCheckboxControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DOCheckboxControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		87E54541AF2510F485CE4598F078B4DB /* Pods-DOCheckboxControl_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DOCheckboxControl_Example-resources.sh"; sourceTree = "<group>"; };
-		983ADAFEB66C1A42A0A54D910BC913E5 /* DOCheckboxControl-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "DOCheckboxControl-Private.xcconfig"; sourceTree = "<group>"; };
 		9DE5C5A508D4D7583E9497BE27AB78A9 /* DOCheckboxControl-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DOCheckboxControl-prefix.pch"; sourceTree = "<group>"; };
 		A50F4E406409E2C8215AAA7F60242D5F /* Pods-DOCheckboxControl_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DOCheckboxControl_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		AD6299A319891F121947C4FEAD779093 /* DOCheckboxControl.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = DOCheckboxControl.modulemap; sourceTree = "<group>"; };
+		B05CCFDB9C3142D2FAB70210CF89C561 /* DOCheckboxControl-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "DOCheckboxControl-Private.xcconfig"; sourceTree = "<group>"; };
 		B0A0B7675602EF6746EC5966E3A2F52F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BC8FCCE71EF5A269C183E4E80A452522 /* CheckboxControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CheckboxControl.swift; sourceTree = "<group>"; };
 		C4FA86BB4FF7B576D8FC8CF6DC35522B /* Pods-DOCheckboxControl_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DOCheckboxControl_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		D583A1C09B298EAD7FF34321DDDF3884 /* DOCheckboxControl-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DOCheckboxControl-dummy.m"; sourceTree = "<group>"; };
-		DBB582B9375F11C04D2E371D638308B2 /* DOCheckboxControl.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DOCheckboxControl.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4F495A66B625A723EE7C6D1B1910390 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D66253D535C7B94B7D4F10FCB71A6DEC /* DOCheckboxControl-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DOCheckboxControl-dummy.m"; sourceTree = "<group>"; };
 		F94632AF39427B532BEFC555E26BE270 /* Pods-DOCheckboxControl_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DOCheckboxControl_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,15 +69,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		308C739F7E762A474095BBF9041A82D8 /* Frameworks */ = {
+		7D0FD76DD7386AE0262B0F4F43D05C44 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6EAA15FD6A6DAD87B72038DC8172F4A0 /* Foundation.framework in Frameworks */,
+				B3B8F4035E94405C10274A7705E2338A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A3AF142F834D06C2054EE948FF6713CD /* Frameworks */ = {
+		E2BBB16534F3156C34F2CC92C420C0E9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -92,10 +92,10 @@
 			children = (
 				AD6299A319891F121947C4FEAD779093 /* DOCheckboxControl.modulemap */,
 				71F5C1289AA9D6123F77157F7DA1728D /* DOCheckboxControl.xcconfig */,
-				983ADAFEB66C1A42A0A54D910BC913E5 /* DOCheckboxControl-Private.xcconfig */,
-				D583A1C09B298EAD7FF34321DDDF3884 /* DOCheckboxControl-dummy.m */,
+				B05CCFDB9C3142D2FAB70210CF89C561 /* DOCheckboxControl-Private.xcconfig */,
+				D66253D535C7B94B7D4F10FCB71A6DEC /* DOCheckboxControl-dummy.m */,
 				9DE5C5A508D4D7583E9497BE27AB78A9 /* DOCheckboxControl-prefix.pch */,
-				58C9063D62247BAD857C8D1CA8F150CD /* DOCheckboxControl-umbrella.h */,
+				527087ED4F7CA71AAF8A1A51AE8CB68A /* DOCheckboxControl-umbrella.h */,
 				B0A0B7675602EF6746EC5966E3A2F52F /* Info.plist */,
 			);
 			name = "Support Files";
@@ -131,7 +131,7 @@
 		53F661C0CA7190D2CF05023FB33D61E4 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				4083C4475B2A83C22BC0344F1B8391E8 /* Foundation.framework */,
+				D4F495A66B625A723EE7C6D1B1910390 /* Foundation.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
@@ -168,7 +168,7 @@
 		C69950E6E20D895BB48015DFF82CADBD /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				BC8FCCE71EF5A269C183E4E80A452522 /* CheckboxControl.swift */,
+				2CDBE00579D18DC942ECF8725D8588AD /* CheckboxControl.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -184,8 +184,8 @@
 		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DBB582B9375F11C04D2E371D638308B2 /* DOCheckboxControl.bundle */,
-				1FFCAE886EDC4CEC2B92AF38E266441F /* DOCheckboxControl.framework */,
+				07034ED38FB6044C57175F20DADC5664 /* DOCheckboxControl.bundle */,
+				820B6231F31AA956ADCB8A430BF5C0F2 /* DOCheckboxControl.framework */,
 				3CE17A8487C80E6B53E182A8121A0703 /* Pods_DOCheckboxControl_Example.framework */,
 			);
 			name = Products;
@@ -210,34 +210,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DE6227ADA513CD5B77E3F627C92A98FC /* Headers */ = {
+		F28CF516DD68FF3D592D2691DF22E789 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6AA5899509CAAFC03B814DA155ACA1B4 /* DOCheckboxControl-umbrella.h in Headers */,
+				B0EE503072FA67D217708C692E186D31 /* DOCheckboxControl-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		66729630BE1AA90F4F26AA70885A59DF /* DOCheckboxControl-DOCheckboxControl */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F40A6AC49A21AA4B39A04A0DBBA16E9C /* Build configuration list for PBXNativeTarget "DOCheckboxControl-DOCheckboxControl" */;
-			buildPhases = (
-				999B47FEC983E724273F9C80406F5FEA /* Sources */,
-				A3AF142F834D06C2054EE948FF6713CD /* Frameworks */,
-				B3460755FC480214E5AB2906A739C792 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "DOCheckboxControl-DOCheckboxControl";
-			productName = "DOCheckboxControl-DOCheckboxControl";
-			productReference = DBB582B9375F11C04D2E371D638308B2 /* DOCheckboxControl.bundle */;
-			productType = "com.apple.product-type.bundle";
-		};
 		8565F68B41E4FE2B2EDDD7A71C0C2E42 /* Pods-DOCheckboxControl_Example */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 55B4F7F9747CB407D8A149DE7B72D114 /* Build configuration list for PBXNativeTarget "Pods-DOCheckboxControl_Example" */;
@@ -249,30 +232,47 @@
 			buildRules = (
 			);
 			dependencies = (
-				40ABFBF4E29A21C4C4A7E9F03AE09E84 /* PBXTargetDependency */,
+				AD688D7C0670CE352CE09BE4F6B09D3C /* PBXTargetDependency */,
 			);
 			name = "Pods-DOCheckboxControl_Example";
 			productName = "Pods-DOCheckboxControl_Example";
 			productReference = 3CE17A8487C80E6B53E182A8121A0703 /* Pods_DOCheckboxControl_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		86B9F8E81AF596D7F31E407881F92F27 /* DOCheckboxControl */ = {
+		8ED77972671EBFF0673550F179F164D6 /* DOCheckboxControl-DOCheckboxControl */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3BF28EACD15C2C043506B34068BF153C /* Build configuration list for PBXNativeTarget "DOCheckboxControl" */;
+			buildConfigurationList = EA2F3902369B2EC777CBFFF1E866AC5B /* Build configuration list for PBXNativeTarget "DOCheckboxControl-DOCheckboxControl" */;
 			buildPhases = (
-				31EC0C40717D62AD67760DE65DDB1A38 /* Sources */,
-				308C739F7E762A474095BBF9041A82D8 /* Frameworks */,
-				A547158A192AE4E28DB19B5FF98B0922 /* Resources */,
-				DE6227ADA513CD5B77E3F627C92A98FC /* Headers */,
+				28E0D9DBAE441B3D124224D95721D856 /* Sources */,
+				E2BBB16534F3156C34F2CC92C420C0E9 /* Frameworks */,
+				3AD01B71430491A687D7D35AACDFBECC /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				A206D44825B91A2DD35DA81D0AB6F077 /* PBXTargetDependency */,
+			);
+			name = "DOCheckboxControl-DOCheckboxControl";
+			productName = "DOCheckboxControl-DOCheckboxControl";
+			productReference = 07034ED38FB6044C57175F20DADC5664 /* DOCheckboxControl.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		D327DF9BAB1CC500CDC17DF147984700 /* DOCheckboxControl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3200C4F9CB5DA94D86D10EA33BADE5B /* Build configuration list for PBXNativeTarget "DOCheckboxControl" */;
+			buildPhases = (
+				98F98D9EAF9FD4D9D21C93427C3A870F /* Sources */,
+				7D0FD76DD7386AE0262B0F4F43D05C44 /* Frameworks */,
+				B7F3069B385AE049D1DB301E6C06EA7A /* Resources */,
+				F28CF516DD68FF3D592D2691DF22E789 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1CBAA164C25FEAB932E520D0D03DB937 /* PBXTargetDependency */,
 			);
 			name = DOCheckboxControl;
 			productName = DOCheckboxControl;
-			productReference = 1FFCAE886EDC4CEC2B92AF38E266441F /* DOCheckboxControl.framework */;
+			productReference = 820B6231F31AA956ADCB8A430BF5C0F2 /* DOCheckboxControl.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -296,38 +296,36 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				86B9F8E81AF596D7F31E407881F92F27 /* DOCheckboxControl */,
-				66729630BE1AA90F4F26AA70885A59DF /* DOCheckboxControl-DOCheckboxControl */,
+				D327DF9BAB1CC500CDC17DF147984700 /* DOCheckboxControl */,
+				8ED77972671EBFF0673550F179F164D6 /* DOCheckboxControl-DOCheckboxControl */,
 				8565F68B41E4FE2B2EDDD7A71C0C2E42 /* Pods-DOCheckboxControl_Example */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		A547158A192AE4E28DB19B5FF98B0922 /* Resources */ = {
+		3AD01B71430491A687D7D35AACDFBECC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5FCF3374B875E9C1485E3F15EAAE5C5 /* DOCheckboxControl.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B3460755FC480214E5AB2906A739C792 /* Resources */ = {
+		B7F3069B385AE049D1DB301E6C06EA7A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D85F50B60DEFC7E43FDD60FA0D5F307E /* DOCheckboxControl.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		31EC0C40717D62AD67760DE65DDB1A38 /* Sources */ = {
+		28E0D9DBAE441B3D124224D95721D856 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C00C4231D8B19086171B15AC9DE9CE2 /* CheckboxControl.swift in Sources */,
-				AFB60E1CD21E63E28D8A4016FCCCF955 /* DOCheckboxControl-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,27 +337,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		999B47FEC983E724273F9C80406F5FEA /* Sources */ = {
+		98F98D9EAF9FD4D9D21C93427C3A870F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF28E46D635C42AFDD9DA1AC27E52B73 /* CheckboxControl.swift in Sources */,
+				4E0C78A9D896C4A6B942347167D860AA /* DOCheckboxControl-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		40ABFBF4E29A21C4C4A7E9F03AE09E84 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = DOCheckboxControl;
-			target = 86B9F8E81AF596D7F31E407881F92F27 /* DOCheckboxControl */;
-			targetProxy = 52DA023E71B3A4E89EB469979FEEF386 /* PBXContainerItemProxy */;
-		};
-		A206D44825B91A2DD35DA81D0AB6F077 /* PBXTargetDependency */ = {
+		1CBAA164C25FEAB932E520D0D03DB937 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "DOCheckboxControl-DOCheckboxControl";
-			target = 66729630BE1AA90F4F26AA70885A59DF /* DOCheckboxControl-DOCheckboxControl */;
-			targetProxy = F0F4F3BAC8036B716CDC8E216BD927FE /* PBXContainerItemProxy */;
+			target = 8ED77972671EBFF0673550F179F164D6 /* DOCheckboxControl-DOCheckboxControl */;
+			targetProxy = 83EE3572AF3969900DEC666F037204DF /* PBXContainerItemProxy */;
+		};
+		AD688D7C0670CE352CE09BE4F6B09D3C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DOCheckboxControl;
+			target = D327DF9BAB1CC500CDC17DF147984700 /* DOCheckboxControl */;
+			targetProxy = 05AD8E49491B9FD0CEFB3AF67D5B6911 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -398,17 +398,33 @@
 			};
 			name = Release;
 		};
-		51AE8C274BE5A2FDA79AD44B08F1CD25 /* Release */ = {
+		3FC4CC5C2BAEDC5C93C0D6266B49B0EB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 983ADAFEB66C1A42A0A54D910BC913E5 /* DOCheckboxControl-Private.xcconfig */;
+			baseConfigurationReference = B05CCFDB9C3142D2FAB70210CF89C561 /* DOCheckboxControl-Private.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1.1.0;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/DOCheckboxControl/DOCheckboxControl-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DOCheckboxControl/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DOCheckboxControl/DOCheckboxControl.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = DOCheckboxControl;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		552D02D5BA751AC2E8790D2811D496CA /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -449,32 +465,17 @@
 			};
 			name = Debug;
 		};
-		6C7C04114D551C49F9F014084B779496 /* Release */ = {
+		55BE4A096DEEC0E532500B7D5A4A990D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 983ADAFEB66C1A42A0A54D910BC913E5 /* DOCheckboxControl-Private.xcconfig */;
+			baseConfigurationReference = B05CCFDB9C3142D2FAB70210CF89C561 /* DOCheckboxControl-Private.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1.0.3;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/DOCheckboxControl/DOCheckboxControl-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/DOCheckboxControl/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/DOCheckboxControl/DOCheckboxControl.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = DOCheckboxControl;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				WRAPPER_EXTENSION = bundle;
 			};
-			name = Release;
+			name = Debug;
 		};
 		9634A53CA891BB9CF10C4A2BC9538924 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -505,9 +506,9 @@
 			};
 			name = Release;
 		};
-		9DE674042598A5AA7F1615FFBD154DE3 /* Debug */ = {
+		9BFD733CA7268F22C4B4DA3823AF8B4A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 983ADAFEB66C1A42A0A54D910BC913E5 /* DOCheckboxControl-Private.xcconfig */;
+			baseConfigurationReference = B05CCFDB9C3142D2FAB70210CF89C561 /* DOCheckboxControl-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				PRODUCT_NAME = DOCheckboxControl;
@@ -515,14 +516,14 @@
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = bundle;
 			};
-			name = Debug;
+			name = Release;
 		};
-		E89141367A0F50B807CC6E41A4C38FA9 /* Debug */ = {
+		EC62B10DA1E3183FBE841D9125A02C4C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 983ADAFEB66C1A42A0A54D910BC913E5 /* DOCheckboxControl-Private.xcconfig */;
+			baseConfigurationReference = B05CCFDB9C3142D2FAB70210CF89C561 /* DOCheckboxControl-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1.0.3;
+				CURRENT_PROJECT_VERSION = 1.1.0;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
@@ -534,16 +535,15 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/DOCheckboxControl/DOCheckboxControl.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = DOCheckboxControl;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		F4E0EB07844D72E6660BD087D9F935B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -587,15 +587,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3BF28EACD15C2C043506B34068BF153C /* Build configuration list for PBXNativeTarget "DOCheckboxControl" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E89141367A0F50B807CC6E41A4C38FA9 /* Debug */,
-				6C7C04114D551C49F9F014084B779496 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		55B4F7F9747CB407D8A149DE7B72D114 /* Build configuration list for PBXNativeTarget "Pods-DOCheckboxControl_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -605,11 +596,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F40A6AC49A21AA4B39A04A0DBBA16E9C /* Build configuration list for PBXNativeTarget "DOCheckboxControl-DOCheckboxControl" */ = {
+		B3200C4F9CB5DA94D86D10EA33BADE5B /* Build configuration list for PBXNativeTarget "DOCheckboxControl" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9DE674042598A5AA7F1615FFBD154DE3 /* Debug */,
-				51AE8C274BE5A2FDA79AD44B08F1CD25 /* Release */,
+				3FC4CC5C2BAEDC5C93C0D6266B49B0EB /* Debug */,
+				EC62B10DA1E3183FBE841D9125A02C4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA2F3902369B2EC777CBFFF1E866AC5B /* Build configuration list for PBXNativeTarget "DOCheckboxControl-DOCheckboxControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55BE4A096DEEC0E532500B7D5A4A990D /* Debug */,
+				9BFD733CA7268F22C4B4DA3823AF8B4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

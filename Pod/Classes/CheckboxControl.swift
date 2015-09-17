@@ -228,7 +228,7 @@ public class CheckboxControl: UIControl {
     
     private var insetRect:CGRect {
         var ret = bounds
-        ret.inset(dx: 2 * lineWidth, dy: 2 * lineWidth)
+        ret.insetInPlace(dx: 2 * lineWidth, dy: 2 * lineWidth)
         return ret
     }
     

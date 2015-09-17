@@ -21,8 +21,8 @@ class CheckboxTableViewCell: UITableViewCell {
         checkbox.setHighlighted(highlighted, animated: animated)
     }
     
-    override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
-        let touch: UITouch = touches.first as! UITouch
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        let touch = touches.first!
         
         if bounds.contains(touch.locationInView(self)) {
             checkbox.setHighlighted(false, animated: true)
