@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		584CBCE15ADF3F4F0260E174 /* Pods_DOCheckboxControl_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53400E43B8C81CFA9D1E5895 /* Pods_DOCheckboxControl_Example.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		584CBCE15ADF3F4F0260E174 /* Pods_DOCheckboxControl_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53400E43B8C81CFA9D1E5895 /* Pods_DOCheckboxControl_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
