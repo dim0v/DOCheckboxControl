@@ -21,7 +21,7 @@ Simply run `pod try DOCheckboxControl`
 
 ## Requirements
 
-- XCode 6.4
+- Xcode 6.4
 - Swift 1.2
 - iOS 8.0
 
