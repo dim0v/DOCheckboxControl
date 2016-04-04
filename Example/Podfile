@@ -1,6 +1,6 @@
 source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
-target 'DOCheckboxControl_Example', :exclusive => true do
+target 'DOCheckboxControl_Example' do
   pod "DOCheckboxControl", :path => "../"
 end

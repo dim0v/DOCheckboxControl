@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "DOCheckboxControl"
-  s.version          = "1.1.1"
+  s.version          = "1.1.2"
   s.summary          = "Lightweight and customizable checkbox control for iOS"
 #s.description      = <<-DESC
 #                       An optional longer description of DOCheckboxControl
@@ -28,9 +28,6 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes/**/*'
-  s.resource_bundles = {
-    'DOCheckboxControl' => ['Pod/Assets/*.png']
-  }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
