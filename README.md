@@ -21,8 +21,8 @@ Simply run `pod try DOCheckboxControl`
 
 ## Requirements
 
-- Xcode 6.4
-- Swift 1.2
+- Xcode 8
+- Swift 3
 - iOS 8.0
 
 ## Installation
@@ -31,7 +31,18 @@ DOCheckboxControl is available through [CocoaPods](http://cocoapods.org). To ins
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "DOCheckboxControl"
+pod 'DOCheckboxControl'
+```
+
+## Swift 2
+
+Swift 2 version is available in `swift2` branch. If you haven't yet moved your project to Swift 3, you can still use DOCheckboxControl by adding **one** of the following lines to your podfile:
+
+```ruby
+pod 'DOCheckboxControl', '~> 1.1' 
+```
+```ruby
+pod 'DOCheckboxControl', :git => 'https://github.com/dim0v/DOCheckboxControl.git', :branch => 'swift2'
 ```
 
 ## Author

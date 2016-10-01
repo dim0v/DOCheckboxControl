@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "DOCheckboxControl"
-  s.version          = "1.1.2"
+  s.version          = "2.0.0"
   s.summary          = "Lightweight and customizable checkbox control for iOS"
 #s.description      = <<-DESC
 #                       An optional longer description of DOCheckboxControl

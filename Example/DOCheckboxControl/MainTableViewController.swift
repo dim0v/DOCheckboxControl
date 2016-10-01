@@ -18,18 +18,18 @@ class MainTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        programmaticalySwitchableCheckbox.enabled = false
+        programmaticalySwitchableCheckbox.isEnabled = false
         switchInstantlyBtn.titleLabel?.numberOfLines = 0;
         switchAnimatedBtn.titleLabel?.numberOfLines = 0;
-        switchInstantlyBtn.titleLabel?.textAlignment = NSTextAlignment.Center;
-        switchAnimatedBtn.titleLabel?.textAlignment = NSTextAlignment.Center;
+        switchInstantlyBtn.titleLabel?.textAlignment = NSTextAlignment.center;
+        switchAnimatedBtn.titleLabel?.textAlignment = NSTextAlignment.center;
     }
     
     @IBAction func switchAnimated() {
-        programmaticalySwitchableCheckbox.setSelected(!programmaticalySwitchableCheckbox.selected, animated: true)
+        programmaticalySwitchableCheckbox.setSelected(!programmaticalySwitchableCheckbox.isSelected, animated: true)
     }
     
     @IBAction func switchNotAnimated() {
-        programmaticalySwitchableCheckbox.setSelected(!programmaticalySwitchableCheckbox.selected, animated: false)
+        programmaticalySwitchableCheckbox.setSelected(!programmaticalySwitchableCheckbox.isSelected, animated: false)
     }
 }

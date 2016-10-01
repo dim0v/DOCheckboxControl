@@ -10,13 +10,13 @@ import UIKit
 
 /// Checkbox control. Sends UIControlEvents.ValueChanged event when it's state changes
 @IBDesignable
-public class CheckboxControl: UIControl {
+open class CheckboxControl: UIControl {
     
     /// Width of checkmark line. 2 points by default. IBInspectable
-    @IBInspectable public var lineWidth: CGFloat = 2.0
+    @IBInspectable open var lineWidth: CGFloat = 2.0
     
     /// Color of checkmark. By default is view's tint color. IBInspectable
-    @IBInspectable public var lineColor: UIColor! {
+    @IBInspectable open var lineColor: UIColor! {
         get {
             if _lineColor == nil {
                 return tintColor
@@ -29,10 +29,10 @@ public class CheckboxControl: UIControl {
     }
     
     /// Color of checkmark in highlighted state. By default is `lineColor` with alpha set to 0.3. IBInspectable
-    @IBInspectable public var lineHighlightedColor: UIColor! {
+    @IBInspectable open var lineHighlightedColor: UIColor! {
         get {
             if _lineHighlightedColor == nil {
-                return lineColor.colorWithAlphaComponent(0.3)
+                return lineColor.withAlphaComponent(0.3)
             }
             return _lineHighlightedColor
         }
@@ -42,16 +42,16 @@ public class CheckboxControl: UIControl {
     }
     
     /// Duration of animation between selected/not selected states and highlighted/not highlighted states. IBInspectable
-    @IBInspectable public var animateDuration: CGFloat = 0.4
+    @IBInspectable open var animateDuration: CGFloat = 0.4
     
     
     /**
     *  A Boolean value that determines the receiver’s selected state.
     *  Specify true if the checkbox is selected; otherwise false. The default is false. This state toggles automatically when touch up happens. IBInspectable
     */
-    @IBInspectable override public var selected: Bool {
+    @IBInspectable override open var isSelected: Bool {
         get {
-            return super.selected
+            return super.isSelected
         }
         set {
             setSelected(newValue, animated: false)
@@ -62,9 +62,9 @@ public class CheckboxControl: UIControl {
     *  A Boolean value that determines whether the receiver is highlighted.
     *  Specify true if the checkbox is highlighted; otherwise false. By default, a checkbox is not highlighted. This state is set automatically when a touch enters and exits during tracking and when there is a touch up. IBInspectable
     */
-    @IBInspectable override public var highlighted: Bool {
+    @IBInspectable override open var isHighlighted: Bool {
         get {
-            return super.highlighted
+            return super.isHighlighted
         }
         set {
             setHighlighted(newValue, animated: false)
@@ -78,8 +78,8 @@ public class CheckboxControl: UIControl {
     :param: selected New state of checkbox (true/false)
     :param: animated Should animate (true/false)
     */
-    public func setSelected(selected:Bool, animated:Bool) {
-        super.selected = selected
+    open func setSelected(_ selected:Bool, animated:Bool) {
+        super.isSelected = selected
         
         CATransaction.begin()
         CATransaction.setAnimationDuration(CFTimeInterval(animated ? animateDuration : 0.0))
@@ -89,7 +89,7 @@ public class CheckboxControl: UIControl {
             lineLayer.strokeEnd = 1
         } else {
             CATransaction.setCompletionBlock { [unowned self] () -> Void in
-                if !self.selected {
+                if !self.isSelected {
                     self.lineLayer.strokeStart = 0
                     self.lineLayer.strokeEnd = 0
                 }
@@ -107,8 +107,8 @@ public class CheckboxControl: UIControl {
     :param: highlighted New state of highlight (true/false)
     :param: animated    Should animate (true/false)
     */
-    public func setHighlighted(highlighted:Bool, animated:Bool) {
-        super.highlighted = highlighted
+    open func setHighlighted(_ highlighted:Bool, animated:Bool) {
+        super.isHighlighted = highlighted
         
         CATransaction.begin()
         CATransaction.setAnimationDuration(CFTimeInterval(animated ? animateDuration : 0.0))
@@ -127,12 +127,12 @@ public class CheckboxControl: UIControl {
     /**
     Lays out subviews.
     */
-    override public func layoutSubviews() {
+    override open func layoutSubviews() {
         super.layoutSubviews()
         
         lineLayer = nil
-        self.setSelected(selected, animated: false)
-        self.setHighlighted(highlighted, animated: false)
+        self.setSelected(isSelected, animated: false)
+        self.setHighlighted(isHighlighted, animated: false)
     }
     
     /**
@@ -141,29 +141,29 @@ public class CheckboxControl: UIControl {
     :param: touch A UITouch object that represents a touch on the receiving control during tracking.
     :param: event An event object encapsulating the information specific to the user event.
     */
-    override public func endTrackingWithTouch(touch: UITouch?, withEvent event: UIEvent?) {
-        super.endTrackingWithTouch(touch!, withEvent: event!)
+    override open func endTracking(_ touch: UITouch?, with event: UIEvent?) {
+        super.endTracking(touch!, with: event!)
         
-        if bounds.contains(touch!.locationInView(self)) {
-            self.setSelected(!selected, animated: true)
-            sendActionsForControlEvents(UIControlEvents.ValueChanged)
+        if bounds.contains(touch!.location(in: self)) {
+            self.setSelected(!isSelected, animated: true)
+            sendActions(for: UIControlEvents.valueChanged)
         }
     }
     
     //MARK: Backing storage for computed properties
     
-    private var _lineHighlightedColor: UIColor?
+    fileprivate var _lineHighlightedColor: UIColor?
     
-    private var _lineColor: UIColor?
+    fileprivate var _lineColor: UIColor?
     
-    private var _lineLayer: CAShapeLayer? {
+    fileprivate var _lineLayer: CAShapeLayer? {
         didSet {
             oldValue?.removeFromSuperlayer()
             lineHighlightedLayer = nil
         }
     }
     
-    private var _lineHighlightedLayer: CAShapeLayer? {
+    fileprivate var _lineHighlightedLayer: CAShapeLayer? {
         didSet {
             oldValue?.removeFromSuperlayer()
         }
@@ -171,20 +171,20 @@ public class CheckboxControl: UIControl {
     
     //MARK: Helper functions and properties
     
-    private func checkmarkLayerWithColor(color:UIColor) -> CAShapeLayer {
+    fileprivate func checkmarkLayerWithColor(_ color:UIColor) -> CAShapeLayer {
         let ret = CAShapeLayer()
         
-        ret.strokeColor = color.CGColor
-        ret.fillColor   = UIColor.clearColor().CGColor
+        ret.strokeColor = color.cgColor
+        ret.fillColor   = UIColor.clear.cgColor
         ret.lineCap     = kCALineCapRound
         ret.lineJoin    = kCALineJoinRound
         ret.lineWidth   = self.lineWidth
-        ret.path        = self.checkmarkPath.CGPath
+        ret.path        = self.checkmarkPath.cgPath
         
         return ret
     }
     
-    private var lineLayer: CAShapeLayer! {
+    fileprivate var lineLayer: CAShapeLayer! {
         get {
             if _lineLayer == nil {
                 _lineLayer = checkmarkLayerWithColor(lineColor)
@@ -198,7 +198,7 @@ public class CheckboxControl: UIControl {
         }
     }
     
-    private var lineHighlightedLayer: CAShapeLayer! {
+    fileprivate var lineHighlightedLayer: CAShapeLayer! {
         get {
             if _lineHighlightedLayer == nil {
                 _lineHighlightedLayer = checkmarkLayerWithColor(lineHighlightedColor)
@@ -213,45 +213,43 @@ public class CheckboxControl: UIControl {
         }
     }
     
-    private var checkmarkPath:UIBezierPath {
+    fileprivate var checkmarkPath:UIBezierPath {
         let path = UIBezierPath()
-        path.moveToPoint(startPoint)
-        path.addLineToPoint(middlePoint)
-        path.addLineToPoint(endPoint)
+        path.move(to: startPoint)
+        path.addLine(to: middlePoint)
+        path.addLine(to: endPoint)
         
         return path
     }
     
-    private var boundsCenter:CGPoint {
+    fileprivate var boundsCenter:CGPoint {
         return CGPoint(x: bounds.midX, y: bounds.midY)
     }
     
-    private var insetRect:CGRect {
-        var ret = bounds
-        ret.insetInPlace(dx: 2 * lineWidth, dy: 2 * lineWidth)
-        return ret
+    fileprivate var insetRect:CGRect {
+        return bounds.insetBy(dx: 2 * lineWidth, dy: 2 * lineWidth)
     }
     
-    private var innerRadius:CGFloat {
+    fileprivate var innerRadius:CGFloat {
         return min(insetRect.width, insetRect.height) / 2
     }
     
-    private var outerRadius:CGFloat {
+    fileprivate var outerRadius:CGFloat {
         return sqrt(pow(insetRect.width, 2) + pow(insetRect.height, 2)) / 2
     }
     
-    private var startPoint:CGPoint {
+    fileprivate var startPoint:CGPoint {
         let angle:CGFloat = CGFloat(13 * M_PI / 12);
         return CGPoint( x: boundsCenter.x + innerRadius * cos(angle),
                         y: boundsCenter.y + innerRadius * sin(angle))
     }
     
-    private var middlePoint:CGPoint {
+    fileprivate var middlePoint:CGPoint {
         return CGPoint( x: boundsCenter.x - 0.25 * innerRadius,
                         y: boundsCenter.y + 0.8 * innerRadius)
     }
     
-    private var endPoint:CGPoint {
+    fileprivate var endPoint:CGPoint {
         let angle:CGFloat = CGFloat(7 * M_PI / 4);
         return CGPoint( x: boundsCenter.x + outerRadius * cos(angle),
                         y: boundsCenter.y + outerRadius * sin(angle))

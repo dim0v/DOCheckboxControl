@@ -1,5 +1,5 @@
 PODS:
-  - DOCheckboxControl (1.1.2)
+  - DOCheckboxControl (2.0.0)
 
 DEPENDENCIES:
   - DOCheckboxControl (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  DOCheckboxControl: 3030e1bc2548e0840c00f80442ef744b2dc3ba39
+  DOCheckboxControl: 49bf5b3a1e242e6b0efa4063e4a4ff038fd157dd
 
 PODFILE CHECKSUM: a2e1f13bc03cc2cae8153e5fd1bbb9a41934d512
 
-COCOAPODS: 1.0.0.beta.6
+COCOAPODS: 1.0.1

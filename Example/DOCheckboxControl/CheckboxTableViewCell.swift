@@ -15,18 +15,18 @@ class CheckboxTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     
     
-    override func setHighlighted(highlighted: Bool, animated: Bool) {
+    override func setHighlighted(_ highlighted: Bool, animated: Bool) {
         super.setHighlighted(highlighted, animated: animated)
         
         checkbox.setHighlighted(highlighted, animated: animated)
     }
     
-    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch = touches.first!
         
-        if bounds.contains(touch.locationInView(self)) {
+        if bounds.contains(touch.location(in: self)) {
             checkbox.setHighlighted(false, animated: true)
-            checkbox.setSelected(!checkbox.selected, animated: true);
+            checkbox.setSelected(!checkbox.isSelected, animated: true);
         }
     }
 }
