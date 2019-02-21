@@ -1,6 +1,6 @@
 {
   "name": "DOCheckboxControl",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "summary": "Lightweight and customizable checkbox control for iOS",
   "homepage": "https://github.com/dim0v/DOCheckboxControl",
   "screenshots": "https://raw.githubusercontent.com/dim0v/DOCheckboxControl/master/Screenshots/Screenshot0.png",
@@ -10,7 +10,7 @@
   },
   "source": {
     "git": "https://github.com/dim0v/DOCheckboxControl.git",
-    "tag": "2.0.0"
+    "tag": "3.0.0"
   },
   "platforms": {
     "ios": "8.0"
