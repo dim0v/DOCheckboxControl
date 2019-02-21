@@ -146,7 +146,7 @@ open class CheckboxControl: UIControl {
         
         if bounds.contains(touch!.location(in: self)) {
             self.setSelected(!isSelected, animated: true)
-            sendActions(for: UIControlEvents.valueChanged)
+            sendActions(for: UIControl.Event.valueChanged)
         }
     }
     
@@ -176,8 +176,8 @@ open class CheckboxControl: UIControl {
         
         ret.strokeColor = color.cgColor
         ret.fillColor   = UIColor.clear.cgColor
-        ret.lineCap     = kCALineCapRound
-        ret.lineJoin    = kCALineJoinRound
+        ret.lineCap     = CAShapeLayerLineCap.round
+        ret.lineJoin    = CAShapeLayerLineJoin.round
         ret.lineWidth   = self.lineWidth
         ret.path        = self.checkmarkPath.cgPath
         
@@ -239,7 +239,7 @@ open class CheckboxControl: UIControl {
     }
     
     fileprivate var startPoint:CGPoint {
-        let angle:CGFloat = CGFloat(13 * M_PI / 12);
+        let angle:CGFloat = CGFloat(13 * Double.pi / 12);
         return CGPoint( x: boundsCenter.x + innerRadius * cos(angle),
                         y: boundsCenter.y + innerRadius * sin(angle))
     }
@@ -250,7 +250,7 @@ open class CheckboxControl: UIControl {
     }
     
     fileprivate var endPoint:CGPoint {
-        let angle:CGFloat = CGFloat(7 * M_PI / 4);
+        let angle:CGFloat = CGFloat(7 * Double.pi / 4);
         return CGPoint( x: boundsCenter.x + outerRadius * cos(angle),
                         y: boundsCenter.y + outerRadius * sin(angle))
     }
